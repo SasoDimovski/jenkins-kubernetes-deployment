@@ -33,8 +33,8 @@ pipeline {
     stage('Deploying React.js container to Kubernetes') {
       steps {
           script {
-		 sh 'kubectl apply -f D:\\! PROJECTS - APP\\Finki Vezbi\\homework5\\jenkins-deploy\\jenkins-kubernetes-deployment\\deployment.yaml'
-		 sh 'kubectl apply -f D:\\! PROJECTS - APP\\Finki Vezbi\\homework5\\jenkins-deploy\\jenkins-kubernetes-deployment\\service.yaml'
+		 bat 'kubectl apply -f D:\\! PROJECTS - APP\\Finki Vezbi\\homework5\\jenkins-deploy\\jenkins-kubernetes-deployment\\deployment.yaml'
+		 bat 'kubectl apply -f D:\\! PROJECTS - APP\\Finki Vezbi\\homework5\\jenkins-deploy\\jenkins-kubernetes-deployment\\service.yaml'
         }
       }
     }
