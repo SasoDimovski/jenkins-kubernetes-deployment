@@ -2,7 +2,7 @@ pipeline {
   environment {
     dockerimagename = "sasodimovski/react-app"
     dockerImage = ""
-	KUBECONFIG = "C:/Users/SASHO/.kube/config"
+	KUBECONFIG = "C:\\Users\\SASHO\\.kube\\config"
   }
   agent any
   stages {
