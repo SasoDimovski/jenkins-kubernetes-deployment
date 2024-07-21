@@ -6,19 +6,19 @@ pipeline {
   }
   agent any
   stages {
-    stage('Checkout Source') {
+    stage('Pull од GitHub') {
       steps {
         git 'https://github.com/SasoDimovski/jenkins-kubernetes-deployment.git'
       }
     }
-    stage('Build image') {
+    stage('Build на Docker image') {
       steps{
         script {
           dockerImage = docker.build dockerimagename
         }
       }
     }
-    stage('Pushing Image') {
+    stage('Push на DockerHub') {
       environment {
           registryCredential = 'dockerhub-credentials'
            }
@@ -30,7 +30,7 @@ pipeline {
         }
       }
     }
-    stage('Deploying React.js container to Kubernetes') {
+    stage('Deployi на Kubernetes') {
       steps {
           script {
 		 bat 'kubectl apply -f deployment.yaml'
