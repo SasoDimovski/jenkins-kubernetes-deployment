@@ -33,7 +33,6 @@ pipeline {
       steps {
         script {
 		 sh ‘kubectl apply -f my-react-deployment.yaml’
-		 sh ‘kubectl apply -f service.yaml’
         }
       }
     }
