@@ -30,7 +30,7 @@ pipeline {
         }
       }
     }
-    stage('Deploy на Kubernetes') {
+    stage('Deploy на Kubernetes ') {
       steps {
           script {
 		 bat 'kubectl apply -f deployment.yaml'
